@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.5 on win32)" generated="20240120 07:46:18.422" rpa="false" schemaversion="2">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\SSH3\Task.Robot">
+<test id="s1-t1" name="Automating a Use Case">
+<kw name="Create connection">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST_IP}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20240120 07:46:19.398" endtime="20240120 07:46:19.399"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${HOST_USERNAME}</arg>
+<arg>${HOST_PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20240120 07:46:19.400" level="INFO">Logging into '192.168.35.130:22' as 'root'.</msg>
+<msg timestamp="20240120 07:46:20.950" level="INFO">Read output: Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.5.0-14-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+Last login: Sat Jan 20 10:40:19 2024 from 192.168.35.1
+[?2004hroot@tayyab-virtual-machine:~#</msg>
+<status status="PASS" starttime="20240120 07:46:19.400" endtime="20240120 07:46:20.951"/>
+</kw>
+<status status="PASS" starttime="20240120 07:46:19.398" endtime="20240120 07:46:20.951"/>
+</kw>
+<kw name="Execute a command">
+<kw name="Write" library="SSHLibrary">
+<arg>cd android</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20240120 07:46:20.966" level="INFO">cd android</msg>
+<status status="PASS" starttime="20240120 07:46:20.953" endtime="20240120 07:46:20.966"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>cd 75d2e2fe</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20240120 07:46:20.982" level="INFO">[?2004l[?2004hroot@tayyab-virtual-machine:~/android# cd 75d2e2fe</msg>
+<status status="PASS" starttime="20240120 07:46:20.967" endtime="20240120 07:46:20.982"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>cd data</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20240120 07:46:20.997" level="INFO">[?2004l[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe# cd data</msg>
+<status status="PASS" starttime="20240120 07:46:20.983" endtime="20240120 07:46:20.997"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>cd ExternalModules</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20240120 07:46:21.013" level="INFO">[?2004l[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe/data# cd ExternalModules</msg>
+<status status="PASS" starttime="20240120 07:46:20.998" endtime="20240120 07:46:21.013"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>cd logs</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20240120 07:46:21.028" level="INFO">[?2004l[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe/data/ExternalModules# cd logs</msg>
+<status status="PASS" starttime="20240120 07:46:21.014" endtime="20240120 07:46:21.028"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>ls</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20240120 07:46:21.043" level="INFO">[?2004l[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe/data/ExternalModules/logs# ls</msg>
+<status status="PASS" starttime="20240120 07:46:21.029" endtime="20240120 07:46:21.044"/>
+</kw>
+<kw name="Read" library="SSHLibrary">
+<var>${output}</var>
+<doc>Consumes and returns everything available on the server output.</doc>
+<msg timestamp="20240120 07:46:21.044" level="INFO">[?2004llog1.txt  log2.txt  log3.txt  log4.txt
+[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe/data/ExternalModules/logs#</msg>
+<msg timestamp="20240120 07:46:21.045" level="INFO">${output} = [?2004llog1.txt  log2.txt  log3.txt  log4.txt
+[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe/data/ExternalModules/logs# </msg>
+<status status="PASS" starttime="20240120 07:46:21.044" endtime="20240120 07:46:21.045"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240120 07:46:21.045" level="INFO">[?2004llog1.txt  log2.txt  log3.txt  log4.txt
+[?2004hroot@tayyab-virtual-machine:~/android/75d2e2fe/data/ExternalModules/logs# </msg>
+<status status="PASS" starttime="20240120 07:46:21.045" endtime="20240120 07:46:21.045"/>
+</kw>
+<status status="PASS" starttime="20240120 07:46:20.952" endtime="20240120 07:46:21.045"/>
+</kw>
+<status status="PASS" starttime="20240120 07:46:19.396" endtime="20240120 07:46:21.046"/>
+</test>
+<status status="PASS" starttime="20240120 07:46:18.426" endtime="20240120 07:46:21.049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

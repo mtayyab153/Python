@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.5 on win32)" generated="20240119 10:25:45.187" rpa="false" schemaversion="2">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\SSH\Task.Robot">
+<test id="s1-t1" name="Automating a Use Case">
+<kw name="Make connection">
+<kw name="Create Connection And Execute Commands" library="AutomationScript">
+<var>${res}</var>
+<msg timestamp="20240119 10:25:46.477" level="INFO">/root</msg>
+<msg timestamp="20240119 10:25:46.477" level="INFO">${res} = /root
+</msg>
+<status status="PASS" starttime="20240119 10:25:45.899" endtime="20240119 10:25:46.477"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${res}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240119 10:25:46.478" level="INFO">/root
+</msg>
+<status status="PASS" starttime="20240119 10:25:46.478" endtime="20240119 10:25:46.479"/>
+</kw>
+<status status="PASS" starttime="20240119 10:25:45.898" endtime="20240119 10:25:46.479"/>
+</kw>
+<status status="PASS" starttime="20240119 10:25:45.897" endtime="20240119 10:25:46.481"/>
+</test>
+<status status="PASS" starttime="20240119 10:25:45.191" endtime="20240119 10:25:46.483"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
