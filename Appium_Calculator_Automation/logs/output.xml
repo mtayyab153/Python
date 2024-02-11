@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 17:46:27.382" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium_Calculator_Automation\Task.robot">
+<test id="s1-t1" name="Automate an Android Calculator App" line="55">
+<kw name="Open Calculator App">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.google.android.calculator</arg>
+<arg>appActivity=com.android.calculator2.Calculator</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240210 17:46:27.849" endtime="20240210 17:46:40.691"/>
+</kw>
+<status status="PASS" starttime="20240210 17:46:27.849" endtime="20240210 17:46:40.692"/>
+</kw>
+<kw name="Divide two numbers">
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/formula</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20240210 17:46:40.701" level="INFO">Clear text field 'id=com.google.android.calculator:id/formula'</msg>
+<msg timestamp="20240210 17:46:42.960" level="INFO">criteria is com.google.android.calculator:id/formula</msg>
+<status status="PASS" starttime="20240210 17:46:40.694" endtime="20240210 17:46:42.961"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 17:46:43.650" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 17:46:42.961" endtime="20240210 17:46:43.650"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 17:46:43.656" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_9'.</msg>
+<msg timestamp="20240210 17:46:43.902" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 17:46:43.650" endtime="20240210 17:46:43.902"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/op_div</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 17:46:43.915" level="INFO">Clicking element 'id=com.google.android.calculator:id/op_div'.</msg>
+<msg timestamp="20240210 17:46:44.752" level="INFO">criteria is com.google.android.calculator:id/op_div</msg>
+<status status="PASS" starttime="20240210 17:46:43.903" endtime="20240210 17:46:44.752"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 17:46:44.759" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_9'.</msg>
+<msg timestamp="20240210 17:46:46.268" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 17:46:44.753" endtime="20240210 17:46:46.268"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${res}</var>
+<arg>id=com.google.android.calculator:id/result_preview</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240210 17:46:46.452" level="INFO">Element 'id=com.google.android.calculator:id/result_preview' text is '1' </msg>
+<msg timestamp="20240210 17:46:46.453" level="INFO">criteria is com.google.android.calculator:id/result_preview</msg>
+<msg timestamp="20240210 17:46:46.453" level="INFO">${res} = 1</msg>
+<status status="PASS" starttime="20240210 17:46:46.269" endtime="20240210 17:46:46.453"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${res}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240210 17:46:46.454" level="INFO">1</msg>
+<status status="PASS" starttime="20240210 17:46:46.453" endtime="20240210 17:46:46.454"/>
+</kw>
+<status status="PASS" starttime="20240210 17:46:40.693" endtime="20240210 17:46:46.455"/>
+</kw>
+<kw name="Get Activity" library="AppiumLibrary">
+<var>${act}</var>
+<doc>Retrieves the current activity on the device.</doc>
+<msg timestamp="20240210 17:46:46.628" level="INFO">${act} = com.android.calculator2.Calculator</msg>
+<status status="PASS" starttime="20240210 17:46:46.458" endtime="20240210 17:46:46.629"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20240210 17:46:46.632" endtime="20240210 17:46:48.708"/>
+</kw>
+<status status="PASS" starttime="20240210 17:46:27.848" endtime="20240210 17:46:48.711"/>
+</test>
+<status status="PASS" starttime="20240210 17:46:27.402" endtime="20240210 17:46:48.716"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

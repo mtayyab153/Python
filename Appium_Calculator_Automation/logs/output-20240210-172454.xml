@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 17:24:08.560" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium_Calculator_Automation\Task.robot">
+<test id="s1-t1" name="Automate an Android Calculator App" line="18">
+<kw name="Open Calculator App">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.google.android.calculator</arg>
+<arg>appActivity=com.android.calculator2.CalculatorGoogle</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240210 17:24:24.843" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240210 17:24:24.842" endtime="20240210 17:24:24.861"/>
+</kw>
+<msg timestamp="20240210 17:24:24.869" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240210 17:24:24.881" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.google.android.calculator' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\PC1\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start -W -n com.google.android.calculator/com.android.calculator2.CalculatorGoogle -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 255'; Command output: Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.calculator/com.android.calculator2.CalculatorGoogle } from null (pid=19668, uid=2000) not exported from uid 10141
+
+java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.calculator/com.android.calculator2.CalculatorGoogle } from null (pid=19668, uid=2000) not exported from uid 10141
+	at com.android.server.wm.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1043)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.java:760)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.java:583)
+	at com.android.server.wm.ActivityStarter.startActivityMayWait(ActivityStarter.java:1288)
+	at com.android.server.wm.ActivityStarter.execute(ActivityStarter.java:514)
+	at com.android.server.wm.ActivityTaskManagerService.startActivityAndWait(ActivityTaskManagerService.java:1231)
+	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:3512)
+	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:513)
+	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:172)
+	at android.os.ShellCommand.exec(ShellCommand.java:104)
+	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:9774)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4498)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2741)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.google.android.calculator' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\PC1\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start -W -n com.google.android.calculator/com.android.calculator2.CalculatorGoogle -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 255'; Command output: Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.calculator/com.android.calculator2.CalculatorGoogle } from null (pid=19668, uid=2000) not exported from uid 10141
+
+java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.calculator/com.android.calculator2.CalculatorGoogle } from null (pid=19668, uid=2000) not exported from uid 10141
+	at com.android.server.wm.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1043)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.java:760)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.java:583)
+	at com.android.server.wm.ActivityStarter.startActivityMayWait(ActivityStarter.java:1288)
+	at com.android.server.wm.ActivityStarter.execute(ActivityStarter.java:514)
+	at com.android.server.wm.ActivityTaskManagerService.startActivityAndWait(ActivityTaskManagerService.java:1231)
+	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:3512)
+	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:513)
+	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:172)
+	at android.os.ShellCommand.exec(ShellCommand.java:104)
+	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:9774)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4498)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2741)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</msg>
+<status status="FAIL" starttime="20240210 17:24:09.036" endtime="20240210 17:24:24.884"/>
+</kw>
+<status status="FAIL" starttime="20240210 17:24:09.035" endtime="20240210 17:24:24.887"/>
+</kw>
+<status status="FAIL" starttime="20240210 17:24:09.034" endtime="20240210 17:24:24.892">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.google.android.calculator' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\PC1\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start -W -n com.google.android.calculator/com.android.calculator2.CalculatorGoogle -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 255'; Command output: Security exception: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.calculator/com.android.calculator2.CalculatorGoogle } from null (pid=19668, uid=2000) not exported from uid 10141
+
+java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.calculator/com.android.calculator2.CalculatorGoogle } from null (pid=19668, uid=2000) not exported from uid 10141
+	at com.android.server.wm.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1043)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.jav...
+    [ Message content over the limit has been removed. ]
+...tivityManagerService.startActivityAndWait(ActivityManagerService.java:3512)
+	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:513)
+	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:172)
+	at android.os.ShellCommand.exec(ShellCommand.java:104)
+	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:9774)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4498)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2741)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</status>
+</test>
+<status status="FAIL" starttime="20240210 17:24:08.571" endtime="20240210 17:24:25.012"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240210 17:24:24.869" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
