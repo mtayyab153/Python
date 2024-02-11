@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 19:27:42.135" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\AppiumLibrary\Task.robot">
+<test id="s1-t1" name="Automate an Android Calculator App" line="56">
+<kw name="Open Calculator App">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.google.android.calculator</arg>
+<arg>appActivity=com.android.calculator2.Calculator</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240210 19:27:42.662" endtime="20240210 19:27:58.176"/>
+</kw>
+<status status="PASS" starttime="20240210 19:27:42.661" endtime="20240210 19:27:58.176"/>
+</kw>
+<kw name="Add two numbers">
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/formula</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20240210 19:27:58.179" level="INFO">Clear text field 'id=com.google.android.calculator:id/formula'</msg>
+<msg timestamp="20240210 19:28:00.029" level="INFO">criteria is com.google.android.calculator:id/formula</msg>
+<status status="PASS" starttime="20240210 19:27:58.177" endtime="20240210 19:28:00.030"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 19:28:00.821" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 19:28:00.030" endtime="20240210 19:28:00.821"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 19:28:00.824" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_9'.</msg>
+<msg timestamp="20240210 19:28:02.185" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 19:28:00.822" endtime="20240210 19:28:02.186"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/op_add</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 19:28:02.194" level="INFO">Clicking element 'id=com.google.android.calculator:id/op_add'.</msg>
+<msg timestamp="20240210 19:28:03.034" level="INFO">criteria is com.google.android.calculator:id/op_add</msg>
+<status status="PASS" starttime="20240210 19:28:02.187" endtime="20240210 19:28:03.035"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 19:28:03.045" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_9'.</msg>
+<msg timestamp="20240210 19:28:03.912" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 19:28:03.036" endtime="20240210 19:28:03.912"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${res}</var>
+<arg>id=com.google.android.calculator:id/result_preview</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240210 19:28:04.034" level="INFO">Element 'id=com.google.android.calculator:id/result_preview' text is '18' </msg>
+<msg timestamp="20240210 19:28:04.035" level="INFO">criteria is com.google.android.calculator:id/result_preview</msg>
+<msg timestamp="20240210 19:28:04.035" level="INFO">${res} = 18</msg>
+<status status="PASS" starttime="20240210 19:28:03.912" endtime="20240210 19:28:04.035"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${res}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240210 19:28:04.035" level="INFO">18</msg>
+<status status="PASS" starttime="20240210 19:28:04.035" endtime="20240210 19:28:04.035"/>
+</kw>
+<status status="PASS" starttime="20240210 19:27:58.177" endtime="20240210 19:28:04.036"/>
+</kw>
+<kw name="Other Keywords in Appium Library">
+<kw name="Get Activity" library="AppiumLibrary">
+<var>${activity_name}</var>
+<doc>Retrieves the current activity on the device.</doc>
+<msg timestamp="20240210 19:28:04.127" level="INFO">${activity_name} = com.android.calculator2.Calculator</msg>
+<status status="PASS" starttime="20240210 19:28:04.037" endtime="20240210 19:28:04.128"/>
+</kw>
+<kw name="Get Appium SessionId" library="AppiumLibrary">
+<var>${appium_s_id}</var>
+<doc>Returns the current session ID as a reference</doc>
+<msg timestamp="20240210 19:28:04.130" level="INFO">Appium Session ID: 334b4755-20d1-4cf6-9c70-deb14d19b260</msg>
+<msg timestamp="20240210 19:28:04.131" level="INFO">${appium_s_id} = 334b4755-20d1-4cf6-9c70-deb14d19b260</msg>
+<status status="PASS" starttime="20240210 19:28:04.128" endtime="20240210 19:28:04.131"/>
+</kw>
+<kw name="Get Appium Timeout" library="AppiumLibrary">
+<var>${appium_default_timeout}</var>
+<doc>Gets the timeout in seconds that is used by various keywords.</doc>
+<msg timestamp="20240210 19:28:04.131" level="INFO">${appium_default_timeout} = 5 seconds</msg>
+<status status="PASS" starttime="20240210 19:28:04.131" endtime="20240210 19:28:04.131"/>
+</kw>
+<kw name="Get Capability" library="AppiumLibrary">
+<var>${device_name}</var>
+<arg>deviceName</arg>
+<doc>Return the desired capability value by desired capability name</doc>
+<msg timestamp="20240210 19:28:04.132" level="INFO">${device_name} = emulator-5554</msg>
+<status status="PASS" starttime="20240210 19:28:04.131" endtime="20240210 19:28:04.132"/>
+</kw>
+<kw name="Get Contexts" library="AppiumLibrary">
+<var>${contexts}</var>
+<doc>Get available contexts.</doc>
+<msg timestamp="20240210 19:28:04.751" level="INFO">['NATIVE_APP']</msg>
+<msg timestamp="20240210 19:28:04.752" level="INFO">${contexts} = ['NATIVE_APP']</msg>
+<status status="PASS" starttime="20240210 19:28:04.132" endtime="20240210 19:28:04.752"/>
+</kw>
+<kw name="Get Current Context" library="AppiumLibrary">
+<var>${curr_context}</var>
+<doc>Get current context.</doc>
+<msg timestamp="20240210 19:28:04.762" level="INFO">${curr_context} = NATIVE_APP</msg>
+<status status="PASS" starttime="20240210 19:28:04.752" endtime="20240210 19:28:04.763"/>
+</kw>
+<kw name="Get Element Rect" library="AppiumLibrary">
+<var>${elem_dims}</var>
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Gets dimensions and coordinates of an element</doc>
+<msg timestamp="20240210 19:28:04.938" level="INFO">Element 'id=com.google.android.calculator:id/digit_9' rect: {'height': 249, 'width': 209, 'x': 450, 'y': 1091} </msg>
+<msg timestamp="20240210 19:28:04.939" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<msg timestamp="20240210 19:28:04.939" level="INFO">${elem_dims} = {'height': 249, 'width': 209, 'x': 450, 'y': 1091}</msg>
+<status status="PASS" starttime="20240210 19:28:04.763" endtime="20240210 19:28:04.939"/>
+</kw>
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${elem_size}</var>
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Get element size</doc>
+<msg timestamp="20240210 19:28:05.087" level="INFO">Element 'id=com.google.android.calculator:id/digit_9' size: {'height': 249, 'width': 209} </msg>
+<msg timestamp="20240210 19:28:05.087" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<msg timestamp="20240210 19:28:05.087" level="INFO">${elem_size} = {'height': 249, 'width': 209}</msg>
+<status status="PASS" starttime="20240210 19:28:04.939" endtime="20240210 19:28:05.088"/>
+</kw>
+<kw name="Get Network Connection Status" library="AppiumLibrary">
+<var>${net_stats}</var>
+<doc>Returns an integer bitmask specifying the network connection type.</doc>
+<msg timestamp="20240210 19:28:05.417" level="INFO">${net_stats} = 6</msg>
+<status status="PASS" starttime="20240210 19:28:05.088" endtime="20240210 19:28:05.417"/>
+</kw>
+<kw name="Get Source" library="AppiumLibrary">
+<var>${curr_page_src}</var>
+<doc>Returns the entire source of the current page.</doc>
+<msg timestamp="20240210 19:28:05.861" level="INFO">${curr_page_src} = &lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2088"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.google.a...</msg>
+<status status="PASS" starttime="20240210 19:28:05.417" endtime="20240210 19:28:05.861"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${res}</var>
+<arg>id=com.google.android.calculator:id/result_preview</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240210 19:28:06.007" level="INFO">Element 'id=com.google.android.calculator:id/result_preview' text is '18' </msg>
+<msg timestamp="20240210 19:28:06.007" level="INFO">criteria is com.google.android.calculator:id/result_preview</msg>
+<msg timestamp="20240210 19:28:06.007" level="INFO">${res} = 18</msg>
+<status status="PASS" starttime="20240210 19:28:05.864" endtime="20240210 19:28:06.007"/>
+</kw>
+<kw name="Get Window Height" library="AppiumLibrary">
+<var>${device_height}</var>
+<doc>Get current device height.</doc>
+<msg timestamp="20240210 19:28:06.039" level="INFO">${device_height} = 2220</msg>
+<status status="PASS" starttime="20240210 19:28:06.007" endtime="20240210 19:28:06.039"/>
+</kw>
+<kw name="Get Window Width" library="AppiumLibrary">
+<var>${device_width}</var>
+<doc>Get current device width.</doc>
+<msg timestamp="20240210 19:28:06.070" level="INFO">${device_width} = 1080</msg>
+<status status="PASS" starttime="20240210 19:28:06.039" endtime="20240210 19:28:06.070"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20240210 19:28:06.070" endtime="20240210 19:28:06.549"/>
+</kw>
+<kw name="Is Keyboard Shown" library="AppiumLibrary">
+<var>${keyboard_status}</var>
+<doc>Return true if Android keyboard is displayed or False if not displayed
+No parameters are used.</doc>
+<msg timestamp="20240210 19:28:06.988" level="INFO">${keyboard_status} = False</msg>
+<status status="PASS" starttime="20240210 19:28:06.549" endtime="20240210 19:28:06.988"/>
+</kw>
+<kw name="Landscape" library="AppiumLibrary">
+<doc>Set the device orientation to LANDSCAPE</doc>
+<status status="PASS" starttime="20240210 19:28:06.989" endtime="20240210 19:28:07.189"/>
+</kw>
+<kw name="Portrait" library="AppiumLibrary">
+<doc>Set the device orientation to PORTRAIT</doc>
+<status status="PASS" starttime="20240210 19:28:07.190" endtime="20240210 19:28:09.313"/>
+</kw>
+<kw name="Open Notifications" library="AppiumLibrary">
+<doc>Opens and expands an Android device's notification drawer.</doc>
+<status status="PASS" starttime="20240210 19:28:09.314" endtime="20240210 19:28:09.398"/>
+</kw>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>50</arg>
+<arg>10</arg>
+<arg>50</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20240210 19:28:09.398" endtime="20240210 19:28:13.793"/>
+</kw>
+<status status="PASS" starttime="20240210 19:28:04.036" endtime="20240210 19:28:13.793"/>
+</kw>
+<status status="PASS" starttime="20240210 19:27:42.660" endtime="20240210 19:28:13.798"/>
+</test>
+<status status="PASS" starttime="20240210 19:27:42.166" endtime="20240210 19:28:13.802"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 18:48:14.553" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\AppiumLibrary\Task.robot">
+<test id="s1-t1" name="Automate an Android Calculator App" line="30">
+<kw name="Open Calculator App">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.google.android.calculator</arg>
+<arg>appActivity=com.android.calculator2.Calculator</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240210 18:48:15.280" endtime="20240210 18:48:28.648"/>
+</kw>
+<status status="PASS" starttime="20240210 18:48:15.279" endtime="20240210 18:48:28.649"/>
+</kw>
+<kw name="Add two numbers">
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/formula</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20240210 18:48:28.656" level="INFO">Clear text field 'id=com.google.android.calculator:id/formula'</msg>
+<msg timestamp="20240210 18:48:31.105" level="INFO">criteria is com.google.android.calculator:id/formula</msg>
+<status status="PASS" starttime="20240210 18:48:28.651" endtime="20240210 18:48:31.105"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 18:48:31.734" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 18:48:31.105" endtime="20240210 18:48:31.735"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 18:48:31.742" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_9'.</msg>
+<msg timestamp="20240210 18:48:32.140" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 18:48:31.735" endtime="20240210 18:48:32.140"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/op_add</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 18:48:32.153" level="INFO">Clicking element 'id=com.google.android.calculator:id/op_add'.</msg>
+<msg timestamp="20240210 18:48:32.993" level="INFO">criteria is com.google.android.calculator:id/op_add</msg>
+<status status="PASS" starttime="20240210 18:48:32.141" endtime="20240210 18:48:32.993"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.calculator:id/digit_9</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 18:48:33.019" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_9'.</msg>
+<msg timestamp="20240210 18:48:33.958" level="INFO">criteria is com.google.android.calculator:id/digit_9</msg>
+<status status="PASS" starttime="20240210 18:48:32.994" endtime="20240210 18:48:33.958"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${res}</var>
+<arg>id=com.google.android.calculator:id/result_preview</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20240210 18:48:34.719" level="INFO">Element 'id=com.google.android.calculator:id/result_preview' text is '18' </msg>
+<msg timestamp="20240210 18:48:34.720" level="INFO">criteria is com.google.android.calculator:id/result_preview</msg>
+<msg timestamp="20240210 18:48:34.720" level="INFO">${res} = 18</msg>
+<status status="PASS" starttime="20240210 18:48:33.958" endtime="20240210 18:48:34.720"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${res}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240210 18:48:34.721" level="INFO">18</msg>
+<status status="PASS" starttime="20240210 18:48:34.720" endtime="20240210 18:48:34.721"/>
+</kw>
+<status status="PASS" starttime="20240210 18:48:28.650" endtime="20240210 18:48:34.722"/>
+</kw>
+<kw name="Other Keywords in Appium Library">
+<kw name="Get Activity" library="AppiumLibrary">
+<var>${activity_name}</var>
+<doc>Retrieves the current activity on the device.</doc>
+<msg timestamp="20240210 18:48:34.858" level="INFO">${activity_name} = com.android.calculator2.Calculator</msg>
+<status status="PASS" starttime="20240210 18:48:34.724" endtime="20240210 18:48:34.859"/>
+</kw>
+<kw name="Get Appium SessionId" library="AppiumLibrary">
+<var>${appium_s_id}</var>
+<doc>Returns the current session ID as a reference</doc>
+<msg timestamp="20240210 18:48:34.862" level="INFO">Appium Session ID: 2f5b33bd-4ff0-45b7-a850-d0a51c09d959</msg>
+<msg timestamp="20240210 18:48:34.862" level="INFO">${appium_s_id} = 2f5b33bd-4ff0-45b7-a850-d0a51c09d959</msg>
+<status status="PASS" starttime="20240210 18:48:34.859" endtime="20240210 18:48:34.862"/>
+</kw>
+<status status="PASS" starttime="20240210 18:48:34.722" endtime="20240210 18:48:34.862"/>
+</kw>
+<status status="PASS" starttime="20240210 18:48:15.277" endtime="20240210 18:48:34.863"/>
+</test>
+<status status="PASS" starttime="20240210 18:48:14.562" endtime="20240210 18:48:34.865"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
