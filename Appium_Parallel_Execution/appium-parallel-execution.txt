@@ -1,0 +1,26 @@
+First Device:
+appium --port 4723 --address 127.0.0.1 --default-capabilities {\"appium:adbPort\":5037,\"appium:systemPort\":8201,\"appium:newCommandTimeout\":0,\"appium:automationName\":\"Uiautomator2\",\"appium:udid\":\"emulator-5554\"}
+Second Device:
+appium --port 4725 --address 127.0.0.1 --default-capabilities {\"appium:adbPort\":5038,\"appium:systemPort\":8202,\"appium:newCommandTimeout\":0,\"appium:automationName\":\"Uiautomator2\",\"appium:udid\":\"emulator-5556\"}
+
+
+Make sure to run the first command in first cmd window.
+Make sure to run the second command in second cmd window.
+
+Now Test the below code only by changing the port i.e:
+Open Chorme Applicaiton
+    Open Application
+    ...  http://localhost:4723
+    ...  appium:platformName=Android
+    ...  appium:appPackage=com.android.chrome
+    ...  appium:appActivity=org.chromium.chrome.browser.document.ChromeLauncherActivity
+    ...  appium:automationName=Uiautomator2
+
+
+Open Chorme Applicaiton
+    Open Application
+    ...  http://localhost:4725
+    ...  appium:platformName=Android
+    ...  appium:appPackage=com.android.chrome
+    ...  appium:appActivity=org.chromium.chrome.browser.document.ChromeLauncherActivity
+    ...  appium:automationName=Uiautomator2
