@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240209 07:57:22.967" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="23">
+<kw name="Open Chat21 Applicaiton">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=chat21.android.demo</arg>
+<arg>appActivity=chat21.android.demo.SplashActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240209 07:57:23.422" endtime="20240209 07:57:35.912"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240209 07:57:38.224" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240209 07:57:35.913" endtime="20240209 07:57:38.224"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240209 07:57:38.227" level="INFO">Clicking element '//android.widget.Button[@text='Continue']'.</msg>
+<msg timestamp="20240209 07:57:38.527" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240209 07:57:38.224" endtime="20240209 07:57:38.527"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Hi</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240209 07:57:38.531" level="INFO">Hi</msg>
+<status status="PASS" starttime="20240209 07:57:38.528" endtime="20240209 07:57:38.532"/>
+</kw>
+<status status="PASS" starttime="20240209 07:57:23.421" endtime="20240209 07:57:38.534"/>
+</kw>
+<status status="PASS" starttime="20240209 07:57:23.420" endtime="20240209 07:57:38.539"/>
+</test>
+<status status="PASS" starttime="20240209 07:57:23.011" endtime="20240209 07:57:38.541"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

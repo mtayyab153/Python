@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 14:50:58.691" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="58">
+<kw name="Open Chorme Applicaiton">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=com.android.chrome</arg>
+<arg>appActivity=org.chromium.chrome.browser.document.ChromeLauncherActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240210 14:51:06.940" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240210 14:51:06.939" endtime="20240210 14:51:06.949"/>
+</kw>
+<msg timestamp="20240210 14:51:06.955" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240210 14:51:06.959" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #8201 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #8201 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones.
+    at getResponseForW3CError (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</msg>
+<status status="FAIL" starttime="20240210 14:51:00.880" endtime="20240210 14:51:06.959"/>
+</kw>
+<status status="FAIL" starttime="20240210 14:51:00.879" endtime="20240210 14:51:06.960"/>
+</kw>
+<status status="FAIL" starttime="20240210 14:51:00.878" endtime="20240210 14:51:06.960">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #8201 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: UiAutomator2 Server cannot start because the local port #8201 is busy. Make sure the port you provide via 'systemPort' capability is not occupied. This situation might often be a result of an inaccurate sessions management, e.g. old automation sessions on the same device must always be closed before starting new ones.
+    at getResponseForW3CError (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</status>
+</test>
+<status status="FAIL" starttime="20240210 14:50:58.944" endtime="20240210 14:51:06.964"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240210 14:51:06.955" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

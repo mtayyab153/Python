@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240207 07:46:33.552" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="11">
+<kw name="Open an Applicaiton">
+<kw name="Log" library="BuiltIn">
+<arg>Hi</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240207 07:46:34.159" level="INFO">Hi</msg>
+<status status="PASS" starttime="20240207 07:46:34.159" endtime="20240207 07:46:34.159"/>
+</kw>
+<status status="PASS" starttime="20240207 07:46:34.158" endtime="20240207 07:46:34.159"/>
+</kw>
+<status status="PASS" starttime="20240207 07:46:34.158" endtime="20240207 07:46:34.160"/>
+</test>
+<status status="PASS" starttime="20240207 07:46:33.565" endtime="20240207 07:46:34.162"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 15:09:15.811" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="49">
+<kw name="Open Chat21 Applicaiton">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=chat21.android.demo</arg>
+<arg>appActivity=chat21.android.demo.SplashActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20240210 15:09:21.097" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C52F748&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20240210 15:09:25.171" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C551448&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20240210 15:09:29.283" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C551F88&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240210 15:09:33.386" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240210 15:09:33.385" endtime="20240210 15:09:33.855"/>
+</kw>
+<msg timestamp="20240210 15:09:33.857" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240210 15:09:33.859" level="FAIL">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C55EB08&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<status status="FAIL" starttime="20240210 15:09:16.994" endtime="20240210 15:09:33.862"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${pop_up_status}</var>
+<arg>Page Should Contain Element</arg>
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240210 15:09:33.862" endtime="20240210 15:09:33.862"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${pop_up_status}'=='True'</arg>
+<arg>ByePass Android 10 Popups</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240210 15:09:33.862" endtime="20240210 15:09:33.862"/>
+</kw>
+<status status="FAIL" starttime="20240210 15:09:16.993" endtime="20240210 15:09:33.863"/>
+</kw>
+<kw name="Login to Chat21 App">
+<arg>testing1@gmail.com</arg>
+<arg>testing1</arg>
+<status status="NOT RUN" starttime="20240210 15:09:33.867" endtime="20240210 15:09:33.867"/>
+</kw>
+<kw name="Get User Details">
+<status status="NOT RUN" starttime="20240210 15:09:33.867" endtime="20240210 15:09:33.868"/>
+</kw>
+<kw name="Logout Chat21 App">
+<status status="NOT RUN" starttime="20240210 15:09:33.869" endtime="20240210 15:09:33.869"/>
+</kw>
+<kw name="Login to Chat21 App">
+<arg>testing3@gmail.com</arg>
+<arg>testing3</arg>
+<status status="NOT RUN" starttime="20240210 15:09:33.870" endtime="20240210 15:09:33.870"/>
+</kw>
+<kw name="Get User Details">
+<status status="NOT RUN" starttime="20240210 15:09:33.870" endtime="20240210 15:09:33.871"/>
+</kw>
+<kw name="Logout Chat21 App">
+<status status="NOT RUN" starttime="20240210 15:09:33.872" endtime="20240210 15:09:33.872"/>
+</kw>
+<status status="FAIL" starttime="20240210 15:09:16.991" endtime="20240210 15:09:33.874">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C55EB08&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</test>
+<status status="FAIL" starttime="20240210 15:09:15.919" endtime="20240210 15:09:33.878"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240210 15:09:21.097" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C52F748&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20240210 15:09:25.171" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C551448&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20240210 15:09:29.283" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002254C551F88&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session</msg>
+<msg timestamp="20240210 15:09:33.857" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

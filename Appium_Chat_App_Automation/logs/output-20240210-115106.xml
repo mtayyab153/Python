@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240210 11:50:01.804" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="42">
+<kw name="Open Chat21 Applicaiton">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=chat21.android.demo</arg>
+<arg>appActivity=chat21.android.demo.SplashActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240210 11:50:02.387" endtime="20240210 11:50:16.830"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${pop_up_status}</var>
+<arg>Page Should Contain Element</arg>
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20240210 11:50:19.600" level="INFO">Current page contains element '//android.widget.Button[@text='Continue']'.</msg>
+<msg timestamp="20240210 11:50:19.601" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240210 11:50:16.830" endtime="20240210 11:50:19.601"/>
+</kw>
+<msg timestamp="20240210 11:50:19.601" level="INFO">${pop_up_status} = True</msg>
+<status status="PASS" starttime="20240210 11:50:16.830" endtime="20240210 11:50:19.601"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${pop_up_status}'=='True'</arg>
+<arg>ByePass Android 10 Popups</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="ByePass Android 10 Popups">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 11:50:19.771" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240210 11:50:19.602" endtime="20240210 11:50:19.771"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:19.777" level="INFO">Clicking element '//android.widget.Button[@text='Continue']'.</msg>
+<msg timestamp="20240210 11:50:20.064" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240210 11:50:19.771" endtime="20240210 11:50:20.065"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240210 11:50:23.069" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240210 11:50:20.066" endtime="20240210 11:50:23.069"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='OK']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 11:50:24.750" level="INFO">xpath criteria: //android.widget.Button[@text='OK']</msg>
+<status status="PASS" starttime="20240210 11:50:23.070" endtime="20240210 11:50:24.751"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='OK']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:24.767" level="INFO">Clicking element '//android.widget.Button[@text='OK']'.</msg>
+<msg timestamp="20240210 11:50:25.333" level="INFO">xpath criteria: //android.widget.Button[@text='OK']</msg>
+<status status="PASS" starttime="20240210 11:50:24.751" endtime="20240210 11:50:25.333"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Hi</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240210 11:50:25.334" level="INFO">Hi</msg>
+<status status="PASS" starttime="20240210 11:50:25.334" endtime="20240210 11:50:25.336"/>
+</kw>
+<status status="PASS" starttime="20240210 11:50:19.602" endtime="20240210 11:50:25.337"/>
+</kw>
+<status status="PASS" starttime="20240210 11:50:19.601" endtime="20240210 11:50:25.337"/>
+</kw>
+<status status="PASS" starttime="20240210 11:50:02.386" endtime="20240210 11:50:25.337"/>
+</kw>
+<kw name="Login to Chat21 App">
+<arg>testing1@gmail.com</arg>
+<arg>testing1</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=chat21.android.demo:id/email</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 11:50:25.733" level="INFO">criteria is chat21.android.demo:id/email</msg>
+<status status="PASS" starttime="20240210 11:50:25.339" endtime="20240210 11:50:25.734"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=chat21.android.demo:id/email</arg>
+<arg>${user_email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:25.740" level="INFO">Typing text 'testing1@gmail.com' into text field 'id=chat21.android.demo:id/email'</msg>
+<msg timestamp="20240210 11:50:26.221" level="INFO">criteria is chat21.android.demo:id/email</msg>
+<status status="PASS" starttime="20240210 11:50:25.734" endtime="20240210 11:50:26.221"/>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<arg>id=chat21.android.demo:id/password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:26.224" level="INFO">Typing password into text field 'id=chat21.android.demo:id/password'</msg>
+<msg timestamp="20240210 11:50:26.771" level="INFO">criteria is chat21.android.demo:id/password</msg>
+<status status="PASS" starttime="20240210 11:50:26.221" endtime="20240210 11:50:26.771"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=chat21.android.demo:id/login</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:26.773" level="INFO">Clicking element 'id=chat21.android.demo:id/login'.</msg>
+<msg timestamp="20240210 11:50:27.459" level="INFO">criteria is chat21.android.demo:id/login</msg>
+<status status="PASS" starttime="20240210 11:50:26.771" endtime="20240210 11:50:27.459"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='SELECT A CONTACT']</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 11:50:34.098" level="INFO">xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']
+xpath criteria: //android.widget.Button[@text='SELECT A CONTACT']</msg>
+<status status="PASS" starttime="20240210 11:50:27.460" endtime="20240210 11:50:34.098"/>
+</kw>
+<status status="PASS" starttime="20240210 11:50:25.338" endtime="20240210 11:50:34.099"/>
+</kw>
+<kw name="Logout Chat21 App">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.TextView[@text='PROFILE']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 11:50:34.241" level="INFO">xpath criteria: //android.widget.TextView[@text='PROFILE']</msg>
+<status status="PASS" starttime="20240210 11:50:34.100" endtime="20240210 11:50:34.242"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.TextView[@text='PROFILE']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:34.248" level="INFO">Clicking element '//android.widget.TextView[@text='PROFILE']'.</msg>
+<msg timestamp="20240210 11:50:34.483" level="INFO">xpath criteria: //android.widget.TextView[@text='PROFILE']</msg>
+<status status="PASS" starttime="20240210 11:50:34.242" endtime="20240210 11:50:34.484"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=chat21.android.demo:id/logout</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240210 11:50:34.956" level="INFO">criteria is chat21.android.demo:id/logout</msg>
+<status status="PASS" starttime="20240210 11:50:34.484" endtime="20240210 11:50:34.956"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=chat21.android.demo:id/logout</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240210 11:50:34.962" level="INFO">Clicking element 'id=chat21.android.demo:id/logout'.</msg>
+<msg timestamp="20240210 11:50:36.016" level="INFO">criteria is chat21.android.demo:id/logout</msg>
+<status status="PASS" starttime="20240210 11:50:34.957" endtime="20240210 11:50:36.017"/>
+</kw>
+<status status="PASS" starttime="20240210 11:50:34.100" endtime="20240210 11:50:36.017"/>
+</kw>
+<status status="PASS" starttime="20240210 11:50:02.385" endtime="20240210 11:50:36.020"/>
+</test>
+<status status="PASS" starttime="20240210 11:50:01.891" endtime="20240210 11:50:36.024"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

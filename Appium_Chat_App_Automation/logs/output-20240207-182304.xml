@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240207 08:04:33.185" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="18">
+<kw name="Open an Applicaiton">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=chat21.android.demo</arg>
+<arg>appActivity=chat21.android.demo.SplashActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240207 08:04:35.910" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240207 08:04:35.909" endtime="20240207 08:04:35.916"/>
+</kw>
+<msg timestamp="20240207 08:04:35.919" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240207 08:04:35.920" level="FAIL">InvalidArgumentException: Message: 'automationName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank
+    at processCapabilities (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.js:345:13)
+    at parseCapsForInnerDriver (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\utils.js:152:40)
+    at AppiumDriver.createSession (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:622:49)
+    at commandExecutor (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:106:18)
+    at AppiumDriver.executeCommand (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:123:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at defaultBehavior (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:1105:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:1215:16)
+    at AppiumDriver.executeCommand (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:1121:17)
+    at asyncHandler (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:393:19)</msg>
+<status status="FAIL" starttime="20240207 08:04:33.672" endtime="20240207 08:04:35.921"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Hi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240207 08:04:35.922" endtime="20240207 08:04:35.922"/>
+</kw>
+<status status="FAIL" starttime="20240207 08:04:33.672" endtime="20240207 08:04:35.922"/>
+</kw>
+<status status="FAIL" starttime="20240207 08:04:33.671" endtime="20240207 08:04:35.923">InvalidArgumentException: Message: 'automationName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank
+    at processCapabilities (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.js:345:13)
+    at parseCapsForInnerDriver (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\utils.js:152:40)
+    at AppiumDriver.createSession (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:622:49)
+    at commandExecutor (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:106:18)
+    at AppiumDriver.executeCommand (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:123:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at defaultBehavior (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:1105:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:1215:16)
+    at AppiumDriver.executeCommand (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\lib\appium.js:1121:17)
+    at asyncHandler (C:\Users\PC1\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:393:19)</status>
+</test>
+<status status="FAIL" starttime="20240207 08:04:33.205" endtime="20240207 08:04:35.927"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240207 08:04:35.919" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

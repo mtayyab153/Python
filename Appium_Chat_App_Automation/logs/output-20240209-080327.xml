@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.5 on win32)" generated="20240209 08:02:45.938" rpa="true" schemaversion="3">
+<suite id="s1" name="Task" source="C:\Users\PC1\PycharmProjects\Appium\Task.robot">
+<test id="s1-t1" name="Android App Automation" line="27">
+<kw name="Open Chat21 Applicaiton">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=chat21.android.demo</arg>
+<arg>appActivity=chat21.android.demo.SplashActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240209 08:02:46.512" endtime="20240209 08:02:58.177"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240209 08:03:00.583" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240209 08:02:58.178" endtime="20240209 08:03:00.583"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='Continue']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240209 08:03:00.588" level="INFO">Clicking element '//android.widget.Button[@text='Continue']'.</msg>
+<msg timestamp="20240209 08:03:00.859" level="INFO">xpath criteria: //android.widget.Button[@text='Continue']</msg>
+<status status="PASS" starttime="20240209 08:03:00.584" endtime="20240209 08:03:00.859"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240209 08:03:03.868" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240209 08:03:00.859" endtime="20240209 08:03:03.868"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='OK']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240209 08:03:05.823" level="INFO">xpath criteria: //android.widget.Button[@text='OK']</msg>
+<status status="PASS" starttime="20240209 08:03:03.869" endtime="20240209 08:03:05.823"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>//android.widget.Button[@text='OK']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240209 08:03:05.840" level="INFO">Clicking element '//android.widget.Button[@text='OK']'.</msg>
+<msg timestamp="20240209 08:03:06.590" level="INFO">xpath criteria: //android.widget.Button[@text='OK']</msg>
+<status status="PASS" starttime="20240209 08:03:05.824" endtime="20240209 08:03:06.590"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Hi</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240209 08:03:06.591" level="INFO">Hi</msg>
+<status status="PASS" starttime="20240209 08:03:06.591" endtime="20240209 08:03:06.591"/>
+</kw>
+<status status="PASS" starttime="20240209 08:02:46.512" endtime="20240209 08:03:06.592"/>
+</kw>
+<status status="PASS" starttime="20240209 08:02:46.511" endtime="20240209 08:03:06.594"/>
+</test>
+<status status="PASS" starttime="20240209 08:02:45.991" endtime="20240209 08:03:06.601"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Task">Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
